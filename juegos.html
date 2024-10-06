@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Hoja de estilos CSS -->
-    <link rel="stylesheet" href="css/styles.css" >
+    <link rel="stylesheet" href="css/styles2.css" >
 </head>
 <body>
     <!-- Menú -->
@@ -30,19 +30,123 @@
     </header>
 
     <main id="main-content">
-        
+        <div class="main-container">
+            <!-- A la izquierda un menú lateral que hace las veces de enlaces rapidos -->
+            <section class="menu-lateral">
+                <header>
+                    <h2>Menú de Juegos</h2>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="#carreras">Juegos de Carreras</a></li>
+                        <li><a href="#cartas">Juegos de Cartas</a></li>
+                        <li><a href="#tesoro">Búsquedas del Tesoro</a></li>
+                        <li><a href="#lanzamientos">Próximos Lanzamientos</a></li>
+                    </ul>
+                </nav>
+                <footer>
+                    <p>Selecciona una categoría para más detalles.</p>
+                </footer>
+            </section>
+
+            <!-- A la derecha una seccion con contenido variable según el juego -->
+            <section class="contenido-dinamico">
+                <header>
+                    <h2 id="titulo-juego">Galería de juegos</h2>
+                </header>
+                
+                <div id="carreras" class="descripcion-juego">
+                    <article>
+                        <header>
+                            <h3>Juegos de Carreras - Detalles</h3>
+                        </header>
+                        <p>Los juegos de carreras son emocionantes y permiten a los jugadores competir en situaciones de tensión.</p>
+                        <p>Son estupendos juegos para pasar un buen rato y distraerse, y los más fáciles para iniciarse en la aplicación.</p>
+                        <p>En estos juegos se busca fomentar la rapidez de reflejos y la coordinación mano-ojo.</p>
+                    </article>
+                    <article>
+                        <header>
+                            <h3>Características de los Juegos de Carreras</h3>
+                        </header>
+                        <p>Las características incluyen gráficos animados y un diseño de pistas desafiantes, junto a nuestro destacado modo multijugador para que puedas medirte a tus amigos más competitivos.</p> 
+                        <p>Estos juegos suelen contar con diferentes niveles de dificultad y la posibilidad de competir contra otros jugadores de todo el mundo en tiempo real.</p>
+                    </article>
+                    <aside>
+                        <p><strong>Consejo para ganar:</strong> Usa el turbo sabiamente para adelantar en las rectas.</p>
+                    </aside>
+                </div>
+
+                <div id="cartas" class="descripcion-juego">
+                    <article>
+                        <header>
+                            <h3>Juegos de Cartas - Introducción</h3>
+                        </header>
+                        <p>Desde Ludaro, queremos hacer aprender de las maneras más entretenidas posibles. Es por eso que las cartas siempre deben estar presentes en nuestra aplicación.</p>
+                        <p>Los juegos de cartas son excelentes para el desarrollo de la estrategia y la paciencia. Desde juegos clásicos como el solitario hasta complejas batallas de estrategia.</p>
+                    </article>
+                    <article>
+                        <header>
+                            <h3>Variantes Populares de Juegos de Cartas</h3>
+                        </header>
+                        <p>Nuestra colección se basa en modificaciones a pequeños juegos conocidos ya por todos, como los de memoria o el clásico poker.</p>
+                        <p>Ten en cuenta que no es fácil, pero aprenderás sin darte ni cuenta. ¿A qué esperas para probarlos?</p>
+                    </article>
+                    <aside>
+                        <p><strong>No te olvides de:</strong> Memorizar las cartas que ya han sido jugadas para mejorar tu estrategia.</p>
+                    </aside>
+                </div>
+
+                <div id="tesoro" class="descripcion-juego">
+                    <article>
+                        <header>
+                            <h3>Búsquedas del Tesoro - Concepto</h3>
+                        </header>
+                        <p>Las búsquedas del tesoro son juegos de exploración y resolución de acertijos. Perfectos para los jugadores que disfrutan de un buen reto mental y la aventura.</p>
+                        <p>Es la manera más rápida de aprender, y a su vez probablemente la que más entretiene a los jugadores.</p>
+                    </article>
+                    <article>
+                        <header>
+                            <h3>Desafíos en las Búsquedas del Tesoro</h3>
+                        </header>
+                        <p>En estos juegos, los jugadores deben superar diferentes desafíos que incluyen acertijos, mapas, y pistas ocultas para encontrar el tesoro final.</p>
+                        <p>Mediante la historia, los personajes fundamentales abrirán su fascinante e intrépido mundo para tu visita.</p>
+                    </article>
+                    <aside>
+                        <p><strong>Nota:</strong> Revisa cada rincón al detalle, las pistas más importantes suelen estar bien escondidas.</p>
+                    </aside>
+                </div>
+
+                <div id="lanzamientos" class="descripcion-juego">
+                    <article>
+                        <header>
+                            <h3>Próximos Lanzamientos - Juegos Destacados</h3>
+                        </header>
+                        <p>Pronto estarán disponibles nuevos juegos emocionantes, con avances tecnológicos y experiencias inmersivas. Mantente atento para las fechas de lanzamiento.</p>
+                        <p>Se explotarán las ventajas de combinar modos historia con multijugador, y se fomentará un aprendizaje por refuerzo constante.</p>
+                        <br>
+                        <p>¡Antes de 2025 habrá anuncios en esta misma pestaña, así que alerta!</p>
+                    </article>
+                    <article>
+                        <header>
+                            <h3>Características a Esperar</h3>
+                        </header>
+                        <p>Los próximos lanzamientos incluyen características como realidad aumentada, opciones de multijugador avanzadas y gráficos de última generación.</p>
+                        <p>Desde Ludaro, estamos trabajando con expertos en el sector para brindar a nuestros usuarios la mejorar de las experiencias.</p>
+                    </article>
+                    <aside>
+                        <p><strong>Atento:</strong> Suscríbete a nuestro correo para estar al tanto de las últimas novedades.</p>
+                    </aside>
+                </div>
+                <br>
+                <footer>
+                    <p>Gracias por explorar nuestros juegos. ¡Esperamos que encuentres algo que te apasione!</p>
+                </footer>
+            </section>
+        </div>
     </main>
 
     <!-- Enlaces internos a secciones y rrss en el footer -->
     <footer id="footer">
-        <h5>Enlaces rápidos</h5>
-        <ul>
-            <li><a href="#introduccion">Ir a Introducción</a></li>
-            <li><a href="#caracteristicas">Ir a Características</a></li>
-            <li><a href="#aprendizaje-niveles">Ir a Niveles</a></li>
-            <li><a href="#tabla-juegos">Ir a Tabla de Juegos</a></li>
-        </ul>
-        <br>
         <div class="socialMedia">
             <a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="Facebook"></a>
             <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
@@ -51,6 +155,37 @@
         </div>
         <p>Copyright 2024 Pablo Herrero</p>
     </footer>
+
+
+    <!-- Con este script consigo que solo se vea uno de los juegos a la derecha, y cargarlos directamente desde las imgs de la landing page-->> 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.menu-lateral a');
+            const sections = document.querySelectorAll('.descripcion-juego');
+            // Activar la sección correcta, corresponde a lo ultimo que cuando se carga ya con hash
+            function activateSection(target) {
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === target) {
+                        section.classList.add('active');
+                    }
+                });
+            }
+            // Añadimos el evento a los enlaces del menú lateral
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href').substring(1);
+                    activateSection(target);
+                });
+            });
+            // Esto sirve para que si hay un hash en la url, cargue ya esa seccion
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                activateSection(hash); 
+            }
+        });
+    </script>
 </body>
 </html>
 

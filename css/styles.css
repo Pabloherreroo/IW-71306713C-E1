@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Colores principales */
+:root {
+    --color-principal: #2eb8cb; 
+    --color-secundario: #f4f4f4; 
+    --color-terciario: #C8A165; 
+}
+
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--color-secundario);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo del encabezado */
+header {
+    font-weight: bold;
+    width: 100%;
+    height: 100px;
+    background-color: #f4f4f4; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.header_principal{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 15px; 
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+}
+
+.logo a h1 {
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin-left: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo a img {
+    width: 50px;
+    height:auto;
+    margin-right: 10px;
+}
+
+/* Navegación principal */
+nav {
+    background-color: var(--color-principal);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: center; 
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Para efecto de hinchado */
+nav ul li a:hover {
+    background-color: #b49024;
+    transform: scale(1.1); 
+}
+
+main {
+    margin-top: 120px; 
+}
+/* Distintas secciones del main */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de las secciones */
+section h2, section h3, section h4, section h5 {
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+/* Parrafos*/
+section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Listas */
+ul, ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Galería de juegos*/
+.galeria-item {
+    display: inline-block;
+    width: 170px;
+    margin-right: 100px;
+    text-align: center;
+}
+
+.mas-proximamente {
+    font-style: italic;
+    color: var(--color-terciario);
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc; /* Define el borde de 1px para las celdas */
+    padding: 10px;
+    text-align: center;
+}
+
+thead {
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+tfoot {
+    background-color: var(--color-terciario);
+    color: #fff;
+}
+
+/* Imágenes dentro de las secciones */
+section img {
+    margin-right: 15px;
+    float: left;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+footer h5{
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: var(--color-principal);
+    border-radius: 5px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.socialMedia img{
+    margin: 0 40px;
+    max-height: 30px;
+    margin-bottom: 20px;
+}
+
+.socialMedia img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/*Cosas especificas de form.html*/
+section fieldset {
+    border: 2px solid var(--color-principal); 
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+section legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-principal);
+}
+
+/* Defino estilo de los inputs */
+input[type="text"], 
+input[type="date"], 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="number"], 
+section necesidades.peticion,
+textarea, 
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background-color: var(--color-secundario);
+}
+
+input[type="range"], 
+input[type="color"],
+select {
+    margin-left: 15px;
+}
+
+
+/* Botones de envío y restablecer */
+input[type="reset"] {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"] {
+    background-color: #48925a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #2b6a3a; /* Un tono más oscuro cuando pasas por encima */
+} 
+input[type="reset"]:hover {
+    background-color: #1b8b9a; 
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section img {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #imagenes img {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul li {
+        margin-bottom: 10px;
+    }
+}

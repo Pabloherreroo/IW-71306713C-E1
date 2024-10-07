@@ -200,88 +200,136 @@ main {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive Design */
+/* Diseño responsive para pantallas pequeñas */
+
+/* Responsive Design para pantallas pequeñas (tablets y móviles) */
 @media screen and (max-width: 768px) {
+    /* La parte superior es igual que el otro css */
     .header_principal {
-        flex-direction: column;
         height: auto;
-        padding: 15px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .logo a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo a h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo a img {
+        width: 60px;
+        height: auto;
+        margin-right: 10px;
     }
 
     .header_principal nav {
         width: 100%;
-        margin: 10px 0;
+        margin-right: 0;
         padding: 0;
+        border-radius: 0;
     }
 
     .header_principal nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    main {
-        margin-top: 150px;
-    }
-
-    .menu-toggle {
         display: block;
-        background-color: var(--color-principal);
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    .header_principal nav ul {
-        display: none;
-    }
-
-    .menu-toggle.active + ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-lateral {
-        width: 100%;
-        height: auto;
-        position: static;
-        box-shadow: none;
-    }
-
-    .contenido-dinamico {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .header_principal nav ul {
         width: 100%;
         text-align: center;
     }
 
+    .header_principal nav ul li {
+        margin: 0;
+    }
+
     .header_principal nav ul li a {
-        padding: 10px 15px;
+        display: block;
+        padding: 15px 0;
+        font-size: 1.2rem;
+        background-color: var(--color-terciario);
+        color: var(--color-secundario);
+        border-bottom: 1px solid #ddd;
         width: 100%;
     }
 
-    footer ul {
-        flex-direction: column;
-        align-items: center;
+    .header_principal nav ul li a:hover {
+        background-color: #b49024;
     }
 
-    footer ul li {
-        margin-bottom: 10px;
+    /* Ajusto main para que quede debajo del menú */
+    main {
+        margin-top: 400px;
+        padding: 20px;
     }
 
+    /* Ajustar el menú lateral para que ocupe más espacio en pantallas pequeñas */
     .menu-lateral {
-        padding: 10px;
+        width: 35%; /* Aumentar el ancho del menú lateral para que sea más legible */
+        left: 0;
+        height: calc(100vh - 100px); /* Ajuste de la altura completa */
+        padding: 15px;
+        overflow-y: auto;
+        background-color: var(--color-secundario);
+    }
+
+    /* Ajustes en la tipografía y el espaciado del menú lateral */
+    .menu-lateral ul {
+        margin-top: 20px;
+    }
+
+    .menu-lateral ul li {
+        margin-bottom: 15px;
+    }
+
+    .menu-lateral ul li a {
+        font-size: 1.1rem; /* Texto legible en pantallas pequeñas */
+        padding: 10px 15px;
+    }
+
+    /* Ajustar el contenido dinámico a la derecha */
+    .contenido-dinamico {
+        width: calc(65% - 40px); /* Resto del espacio después del menú lateral */
+        margin-left: 35%; /* Mismo ancho que el menú lateral */
+        padding: 15px;
+    }
+
+    /* Ajustes generales para el contenido */
+    .contenido-dinamico article {
+        margin-bottom: 20px;
     }
 }
+
+/* Para pantallas aún más pequeñas (menos de 480px) */
+@media screen and (max-width: 480px) {
+    /* Menú lateral aún más ancho */
+    .menu-lateral {
+        width: 40%; /* Mayor ancho para pantallas muy pequeñas */
+    }
+
+    /* Contenido dinámico más ajustado */
+    .contenido-dinamico {
+        width: calc(60% - 40px);
+        margin-left: 40%; /* Ajuste del margen izquierdo según el ancho del menú lateral */
+        margin-top: 130px;
+        padding: 10px;
+    }
+
+    /* Ajustar el tamaño del texto del menú lateral */
+    .menu-lateral ul li a {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
+

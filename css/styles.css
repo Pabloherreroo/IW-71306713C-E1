@@ -157,12 +157,12 @@ th, td {
 
 thead {
     background-color: var(--color-principal);
-    color: #fff;
+    color: white;
 }
 
 tfoot {
     background-color: var(--color-terciario);
-    color: #fff;
+    color: white;
 }
 
 /* Imágenes dentro de las secciones */
@@ -199,7 +199,7 @@ footer ul {
 }
 
 footer ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     padding: 5px 10px;
 }
@@ -284,13 +284,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #2b6a3a; /* Un tono más oscuro cuando pasas por encima */
+    background-color: #2b6a3a; 
 } 
 input[type="reset"]:hover {
     background-color: #1b8b9a; 
 }
 
-/* Secciones para lineas.html, su grid */
+/* Secciones para lineas.html, su grid, su video y su calendario */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -305,6 +305,45 @@ input[type="reset"]:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
+
+#video {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#video video {
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    width: 100%; 
+}
+
+#video p {
+    margin-top: 10px;
+}
+
+.calendario {
+    text-align: center;
+}
+
+.calendario tbody{
+    color: white;
+}
+
+.calendario .lanzamiento {
+    background-color: var(--color-terciario);
+    font-weight: bold; 
+}
+
+.calendario ul {
+    list-style: none;
+    padding: 0;
+}
+
+.calendario li {
+    margin: 5px 0;
+}
+
 
 /* Diseño responsive para pantallas pequeñas */
 

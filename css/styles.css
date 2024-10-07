@@ -291,71 +291,138 @@ input[type="reset"]:hover {
 }
 
 
-/* Responsive Design */
+/* Estilos generales para pantallas pequeñas (tablets y móviles) */
 @media screen and (max-width: 768px) {
+    /* Centrar el logo y colocarlo en la parte superior */
     .header_principal {
-        flex-direction: column;
         height: auto;
-        padding: 15px;
-    }
-
-    .header_principal nav {
-        width: 100%;
-        margin: 10px 0;
-        padding: 0;
-    }
-
-    .header_principal nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    main {
-        margin-top: 150px;
-    }
-
-    .menu-toggle {
-        display: block;
-        background-color: var(--color-principal);
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    .header_principal nav ul {
-        display: none;
-    }
-
-    .menu-toggle.active + ul {
-        display: flex;
+        padding: 20px;
         flex-direction: column;
         align-items: center;
     }
-}
 
-@media screen and (max-width: 480px) {
-    body {
-        padding: 10px;
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Separación entre logo y menú */
+        width: 100%; /* Asegurar que el logo ocupe todo el ancho */
+    }
+
+    .logo a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo a h1 {
+        font-size: 1.8rem; /* Tamaño del texto en dispositivos pequeños */
+    }
+
+    .logo a img {
+        width: 60px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    /* Hacer que el menú sea vertical y ocupe todo el ancho */
+    .header_principal nav {
+        width: 100%;
+        margin-right: 0; /* Eliminar márgenes */
+        padding: 0; 
+        background-color: var(--color-principal);
+        border-radius: 0; /* Sin bordes redondeados */
+        box-shadow: none; /* Sin sombra en móviles */
     }
 
     .header_principal nav ul {
+        display: block; /* Mostrar en formato vertical */
         width: 100%;
         text-align: center;
     }
 
-    .header_principal nav ul li a {
-        padding: 10px 15px;
-        width: 100%;
+    .header_principal nav ul li {
+        margin: 0;
     }
 
+    .header_principal nav ul li a {
+        display: block;
+        padding: 15px 0; /* Añadir más espacio entre los elementos del menú */
+        font-size: 1.2rem; /* Aumentar el tamaño del texto para ser más legible */
+        background-color: var(--color-terciario);
+        color: var(--color-secundario);
+        border-bottom: 1px solid #ddd; /* Separación entre elementos del menú */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+    }
+
+    .header_principal nav ul li a:hover {
+        background-color: #b49024; /* Efecto hover en móviles */
+        transform: none; /* Sin efecto de escala */
+    }
+
+    /* Ajustar el contenido principal (main) para que quede debajo del menú */
+    main {
+        margin-top: 20px; /* Espacio entre el menú y el contenido */
+        padding: 20px; /* Asegurar que tenga un buen padding en móviles */
+    }
+
+    /* Ajustar imágenes dentro de las secciones */
+    section img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0; /* Espacio alrededor de las imágenes */
+        float: none; /* Asegurar que no floten en móviles */
+    }
+
+    /* Ajustar las secciones del contenido */
+    section {
+        padding: 15px; /* Menos padding en dispositivos pequeños */
+    }
+
+    /* Tablas en pantallas pequeñas */
+    table {
+        font-size: 0.9rem; /* Reducir el tamaño de fuente */
+    }
+
+    th, td {
+        padding: 8px; /* Reducir el padding de las celdas */
+    }
+
+    /* Ajustes para el footer */
     footer ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Poner los enlaces uno debajo del otro en móviles */
+        padding: 0;
     }
 
     footer ul li {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Añadir margen inferior entre los enlaces */
+    }
+
+    .socialMedia img {
+        margin: 10px 20px; /* Ajustar el margen de los íconos */
+    }
+}
+
+/* Estilos adicionales para pantallas más pequeñas (menos de 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajustar tamaño de texto e imágenes aún más en pantallas pequeñas */
+    .logo a h1 {
+        font-size: 1.5rem;
+    }
+
+    .header_principal nav ul li a {
+        font-size: 1rem; /* Texto más pequeño en el menú */
+    }
+
+    /* Reducir el tamaño de las imágenes en la galería */
+    .galeria-item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    /* Ajustar tablas aún más */
+    th, td {
+        padding: 6px;
     }
 }

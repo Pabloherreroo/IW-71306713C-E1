@@ -290,6 +290,20 @@ input[type="reset"]:hover {
     background-color: #1b8b9a; 
 }
 
+/* Secciones para lineas.html, su grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 /* Diseño responsive para pantallas pequeñas */
 

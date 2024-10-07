@@ -293,7 +293,7 @@ input[type="reset"]:hover {
 /* Secciones para lineas.html, su grid */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     margin: 20px 0;
 }
@@ -303,6 +303,7 @@ input[type="reset"]:hover {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 /* Diseño responsive para pantallas pequeñas */
@@ -409,6 +410,11 @@ input[type="reset"]:hover {
         white-space: nowrap;
     }
 
+    /* Dos columnas */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
     footer ul {
         flex-direction: column;
         padding: 0;
@@ -443,5 +449,9 @@ input[type="reset"]:hover {
 
     th, td {
         padding: 6px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; 
     }
 }
